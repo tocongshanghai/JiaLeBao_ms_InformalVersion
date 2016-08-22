@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jialebao02.jialebao_ms_informalversion.activity.WelcomeActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECEDF1"
+        android:paddingTop="80dp" >
+
+        <RadioGroup
+            android:id="@+id/rg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checkedButton="@+id/system_send"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/system_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:button="@null"
+                android:drawableBottom="@drawable/bg_select_rg_login"
+                android:gravity="center_horizontal"
+                android:text="@string/ac_welcome_bt_sender"
+                android:textColor="@drawable/bg_select_textcolor_login"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/system_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableBottom="@drawable/bg_select_rg_login"
+                android:gravity="center_horizontal"
+                android:text="@string/ac_welcome_bt_site"
+                android:textColor="@drawable/bg_select_textcolor_login"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rg_title"
+            android:layout_marginTop="38dp" >
+
+            <FrameLayout
+                android:id="@+id/username_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:hint="@string/ac_welcome_logindialog_et_username"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true" >
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/dropdown_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/login_input_arrow" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/username_layout"
+                android:background="#E5E6E7" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/line1"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                android:hint="@string/ac_welcome_logindialog_et_password"
+                android:inputType="textPassword"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:singleLine="true" >
+            </EditText>
+
+            <RelativeLayout
+                android:id="@+id/remember_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" >
+
+                <CheckBox
+                    android:id="@+id/remember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_savepwd_select"
+                    android:checked="true"
+                    android:text="@string/ac_welcome_logindialog_et_savepassword"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="#716b60" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/remember_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_press"
+                android:text="@string/ac_welcome_logindialog_bt_login"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:drawablePadding="15dp"
+            android:drawableTop="@drawable/login_logo"
+            android:text="@string/app_system_name" />
+    </RelativeLayout>
+
+</RelativeLayout>
